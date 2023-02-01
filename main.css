@@ -19,7 +19,11 @@
   align-items: center;
 }
 
-.color-column span,
+.color-column i {
+  font-size: 2rem;
+}
+
+.color-column i,
 .color-column h2 {
   display: block;
   padding: 10px;
@@ -27,7 +31,7 @@
   cursor: pointer;
 }
 
-.color-column span:hover,
+.color-column i:hover,
 .color-column h2:hover {
   background-color: rgba(0, 0, 0, 0.1);
 }
