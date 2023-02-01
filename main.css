@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+.coolours__container {
+  height: 100vh;
+  display: flex;
+}
+
+.color-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.color-column span,
+.color-column h2 {
+  display: block;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.color-column span:hover,
+.color-column h2:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
