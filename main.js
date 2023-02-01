@@ -41,18 +41,18 @@ document.addEventListener('keydown', (event) => {
   }
 });
 
+const copyToClipboard = (text) => {
+  navigator.clipboard.writeText(text);
+};
+
 document.addEventListener('click', (event) => {
   const type = event.target.dataset.type;
-  let node;
+  let node = event.target;
   if (type === 'lock') {
-    if (event.target.tagName.toLocaleLowerCase() === 'i') {
-      node = event.target;
-    } else {
-      node = event.target.children[0];
-    }
-
     node.classList.toggle('fa-lock-open');
     node.classList.toggle('fa-lock');
+  } else if (type === 'copy') {
+    copyToClipboard(node.textContent);
   }
 });
 
